@@ -1,3 +1,4 @@
+/* eslint-disable react-hooks/exhaustive-deps */
 import {
   Button,
   Form,
@@ -5,7 +6,6 @@ import {
   Modal,
   Select,
   Space,
-  Spin,
   Table,
   Tag,
 } from "antd";
@@ -31,7 +31,7 @@ const emptyForm: CategoryForm = {
 };
 
 function Categories() {
-  const { data, loading, error } = useSelector(
+  const { data, loading } = useSelector(
     (state: AppState) => state.categories
   );
 

@@ -1,3 +1,4 @@
+/* eslint-disable react-hooks/exhaustive-deps */
 import { Form, Input, Result, Button } from "antd";
 import { useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
@@ -13,7 +14,7 @@ function Login() {
   const location = useLocation<{ newSignUp?: boolean }>();
   const dispatch = useDispatch();
 
-  const { data, loading, error } = useSelector((state: AppState) => state.user);
+  const { data, error } = useSelector((state: AppState) => state.user);
 
   const onFinish = (values: LoginForm) => {
     dispatch(login(values));

@@ -1,3 +1,4 @@
+/* eslint-disable react-hooks/exhaustive-deps */
 import { DeleteOutlined, EditOutlined } from "@ant-design/icons";
 import { Button, Form, Input, Modal, Select, Space, Table, Tag } from "antd";
 import React, { useState } from "react";
@@ -22,7 +23,7 @@ const emptyForm: RecordForm = {
 };
 
 function Records() {
-  const { data, loading, error } = useSelector(
+  const { data, loading } = useSelector(
     (state: AppState) => state.records
   );
 

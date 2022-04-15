@@ -7,12 +7,13 @@ import { AppState } from "../store";
 import { isLoggedIn } from "../store/actions/userActions";
 
 function AppHeader() {
-  const { data, loading, error } = useSelector((state: AppState) => state.user);
+  const { data, loading } = useSelector((state: AppState) => state.user);
 
   const dispatch = useDispatch();
 
   useEffect(() => {
     dispatch(isLoggedIn());
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
   const { pathname } = useLocation();
